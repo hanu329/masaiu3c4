@@ -2,6 +2,7 @@ async function apiCall(url) {
 
     let response = await fetch(url)
     let data =  await response.json()
+     data = data.articles;
     console.log(data)
     return data;
 
@@ -19,6 +20,7 @@ function appendArticles(articles, main) {
 
         let p=document.createElement("p")
         p.textContent="rahul"
+        p.style.fontSize="200px"
         main.append(p)
     })
 

@@ -46,17 +46,21 @@ let res;
   btn.addEventListener("click",searchnews)
 
   async function searchnews(){
-    let search_item = document.getElementById("searchbar").value;
+    let search_items = document.getElementById("searchbar").value;
 
-let api= `https://gnews.io/api/v4/search?q=${search_item}&token=c1505969ee6b627ae963c34bbf8bfaba`
+  
+    localStorage.setItem("search_item",JSON.stringify(search_items))
+
+let api= `https://gnews.io/api/v4/search?q=${search_items}&token=c1505969ee6b627ae963c34bbf8bfaba`
 
 let res =   apiCall(api)
 
 
-res.then(function(resolve){
 
-  appendArticles(resolve,main_div)
-})
+
+  appendArticles(res,main_div)
+
+
 
 
 
