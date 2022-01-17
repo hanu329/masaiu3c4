@@ -15,6 +15,12 @@ async function apiCall(url) {
 function appendArticles(articles, main) {
 
     //add append logic here
+    articles.forEach(function(el){
+
+        let p=document.createElement("p")
+        p.textContent="rahul"
+        main.append(p)
+    })
 
 }
 

@@ -31,7 +31,8 @@
 </html>
 <script type="module">
  
-
+let res;
+ let main_div= document.getElementById("main")
 
   import sidebar from "./components/sidebar.js"
 
@@ -46,16 +47,23 @@
 
   async function searchnews(){
     let search_item = document.getElementById("searchbar").value;
-console.log(1)
+
 let api= `https://gnews.io/api/v4/search?q=${search_item}&token=c1505969ee6b627ae963c34bbf8bfaba`
 
 let res =   apiCall(api)
 
 
+res.then(function(resolve){
+
+  appendArticles(resolve,main_div)
+})
+
+
+
   }
 
  
-
+  
 
 
 </script>
