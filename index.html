@@ -23,7 +23,7 @@
 
       <div id="main">
         <!--DO NOT CHANGE THIS ID's-->
-
+   
       </div>
     </div>
   </body>
@@ -40,12 +40,24 @@
 
   import { apiCall, appendArticles } from "./scripts/main.js"
 
-      let api= "https://gnews.io/"
+  let btn = document.getElementById("btn");
+  
+  btn.addEventListener("click",searchnews)
 
-   let res =  await apiCall(api)
+  async function searchnews(){
+    let search_item = document.getElementById("searchbar").value;
+console.log(1)
+let api= `https://gnews.io/api/v4/search?q=${search_item}&token=c1505969ee6b627ae963c34bbf8bfaba`
+
+let res =   apiCall(api)
+
+
+  }
+
  
 
 
 
 </script>
 
+<!-- c1505969ee6b627ae963c34bbf8bfaba -->

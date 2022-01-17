@@ -4,7 +4,8 @@ function sidebar() {
     <ul>
     <li>log in</li>
     <li>
-      <input type="text" placeholder="serch news">
+    <input type="text" id="searchbar" placeholder="Search news">
+    <button id="btn">search</button>
     </li>
     <li>start up</li>
     <li>Audio</li>
